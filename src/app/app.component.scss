@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Outfit:wght@200&display=swap');
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    .first {
+        width: 35%;
+        display: flex;
+        align-items: center;
+        background-size: cover;
+        background-image: url(../assets/bg-main-desktop.png);
+        .cards {
+            width: 100%;
+            .front-card,.back-card {
+                width: 447px;
+                height: 245px;
+            }
+            .front-card {
+                padding: 30px 30px 0px;
+                box-sizing: border-box;
+                margin-left: 42%;
+                margin-bottom: 35px;
+                background-image: url(../assets/bg-card-front.png);
+                font-family: 'Outfit', sans-serif;
+                .cardInfo {
+                    margin-top: 65px;
+                    h2 {
+                        letter-spacing: 3px;
+                        font-size: 27px;
+                        color: #FFFFFF;
+                        margin: 25px 0px;
+                    }
+                    section {
+                        display: flex;
+                        justify-content: space-between;
+                        span {
+                            color: #FFFFFF;
+                            text-transform: uppercase;
+                            font-size: 14px;
+                            font-weight: bold;
+                            letter-spacing: 1px;
+                        }
+                    }
+                }
+            }
+            .back-card {
+                margin-left: 62%;
+                background-image: url(../assets/bg-card-back.png);
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                padding: 0px 55px;
+                box-sizing: border-box;
+                span {
+                    font-family: 'Outfit', sans-serif;
+                    color: #FFFFFF;
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    margin-bottom: 4px;
+                }
+            }
+        }
+    }
+    .second {
+        width: 65%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        form {
+            margin-left: 25%;
+            width: 300px;
+            font-family: 'Outfit', sans-serif;
+            div {
+                margin-top: 10px;
+                span {
+                    color: red;
+                    font-size: 12px;
+                }
+            }
+            label {
+                display: block;
+                font-weight: bold;
+                text-transform: uppercase;
+                font-size: 11px;
+                letter-spacing: 1px;
+                margin-bottom: 2px;
+            }
+            input {
+                height: 35px;
+                border-radius: 5px;
+                border: 1.5px solid hsl(278, 68%, 11%, 0.1);
+                box-sizing: border-box;
+                outline: none;
+                padding-left: 10px;
+                font-weight: bold;
+                color: hsl(278, 68%, 11%);
+                font-family: 'Outfit', sans-serif;
+                &::placeholder {
+                    font-family: 'Outfit', sans-serif;
+                    font-weight: bold;
+                    opacity: 0.5;
+                }
+            }
+            input[type=text]:focus,
+            input[type=number]:focus {
+                border: 1.5px solid hsl(278, 69%, 25%);
+                box-shadow: 0px 0px 1px hsl(278, 69%, 25%);
+            }
+            input[type=number]::-webkit-inner-spin-button,
+            input[type=number]::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+            .cardHolderName,.cardNumber {
+                width: 100%;
+                height: 74px;
+                input {
+                    width: 100%;
+                }
+            }
+            .date-cvc {
+                display: flex;
+                justify-content: space-between;
+                height: 90px;
+                .date {
+                    width: 45%;
+                    .month-year {
+                        display: flex;
+                        justify-content: space-between;
+                        .month,.year {
+                            
+                        }
+                        input {
+                            width: 65px;
+                        }
+                    }
+                }
+                .cvc {
+                    width: 50%;
+                    input {
+                        width: 100%;
+                    }
+                }
+            }
+            .submitBtn {
+                width: 100%;
+                button {
+                    width: 100%;
+                    height: 40px;
+                    box-sizing: border-box;
+                    background-color: hsl(278, 68%, 11%);
+                    border-radius: 7px;
+                    border: none;
+                    color: #FFFFFF;
+                    letter-spacing: 1px;
+                    cursor: pointer;
+                    transition: .2s linear;
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+    }
+}
